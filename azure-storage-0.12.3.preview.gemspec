@@ -28,28 +28,28 @@ dependencies:
   name: faraday
   requirement: !ruby/object:Gem::Requirement
     requirements:
-    - - "~>"
+    - - ">="
       - !ruby/object:Gem::Version
         version: '0.9'
   type: :runtime
   prerelease: false
   version_requirements: !ruby/object:Gem::Requirement
     requirements:
-    - - "~>"
+    - - ">="
       - !ruby/object:Gem::Version
         version: '0.9'
 - !ruby/object:Gem::Dependency
   name: faraday_middleware
   requirement: !ruby/object:Gem::Requirement
     requirements:
-    - - "~>"
+    - - ">="
       - !ruby/object:Gem::Version
         version: '0.10'
   type: :runtime
   prerelease: false
   version_requirements: !ruby/object:Gem::Requirement
     requirements:
-    - - "~>"
+    - - ">="
       - !ruby/object:Gem::Version
         version: '0.10'
 - !ruby/object:Gem::Dependency
