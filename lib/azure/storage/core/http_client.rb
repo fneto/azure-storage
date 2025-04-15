@@ -45,10 +45,10 @@ module Azure::Storage::Core
 
     def build_http(uri)
       ssl_options = {}
-      if uri.is_a?(URI) && uri.scheme.downcase == 'https'
-        ssl_options[:ca_file] = self.ca_file if self.ca_file
-        ssl_options[:verify] = true
-      end
+      # if uri.is_a?(URI) && uri.scheme.downcase == 'https'
+      #   ssl_options[:ca_file] = self.ca_file if self.ca_file
+      #   ssl_options[:verify] = true
+      # end
       proxy_options = if ENV['HTTP_PROXY']
                         URI::parse(ENV['HTTP_PROXY'])
                       elsif ENV['HTTPS_PROXY']
