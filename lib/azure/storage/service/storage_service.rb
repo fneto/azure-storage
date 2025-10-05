@@ -122,14 +122,8 @@ module Azure::Storage
         end
 
         if encode
-          path = CGI.escape(path.encode('UTF-8'))
-
-          # decode the forward slashes to match what the server expects.
-          path = path.gsub(/%2F/, '/')
-          # decode the backward slashes to match what the server expects.
-          path = path.gsub(/%5C/, '/')
-          # Re-encode the spaces (encoded as space) to the % encoding.
-          path = path.gsub(/\+/, '%20')
+          path = URI.encode_www_form_component(path)
+          path = path.gsub(/%2F/, '/').gsub(/%5C/, '/')
         end
 
         super path, query
