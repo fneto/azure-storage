@@ -336,7 +336,7 @@ module Azure::Storage::Core
         sas_params = if use_account_sas
                        generate_account_sas_token(options)
                      else
-                       generate_service_sas_token(uri.path, options)
+                       generate_service_sas_token(URI.unescape(uri.path), options)
                      end
 
         URI.parse(uri.to_s + (uri.query.nil? ? '?' : '&') + sas_params)
